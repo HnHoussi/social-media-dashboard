@@ -1,23 +1,39 @@
 @use '../utilities/' as *;
 
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(30);
+
+    @include breakpoint(medium) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(large) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+}
+
 .card {
     background: var(--dark-card);
     color: var(--dark-text1);
-    width: rem(255);
     padding: rem(25);
     text-align: center;
+    border-radius: rem(5);
 
     &--facebook {
-            
+        border-top: rem(5) solid var(--facebook);
     }
     &--twitter {
+        border-top: rem(5) solid var(--twitter);
 
     }
     &--instagram {
-
+        border-top: rem(5) solid var(--instagram-middle);
+        
     }
     &--youtube {
-
+        border-top: rem(5) solid var(--youtube)
     }
 
     &__platform {
@@ -25,6 +41,7 @@
         justify-content: center;
         align-items: center;
         margin-bottom: rem(28);
+        height: rem(20);
     }
 
     &__icon {
@@ -78,6 +95,9 @@
     }
 
     &__change {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: rem(12);
         font-weight: 700;
 
@@ -88,5 +108,9 @@
         &--down {
             color: var(--brightred);
         }
+    }
+
+     img {
+      margin-right: rem(4);
     }
 }
