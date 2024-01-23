@@ -22,14 +22,14 @@
     <link rel="stylesheet" href="/distribution/styles.css" />
     <script defer src="/distribution/script.js"></script>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
         font-size: 11px;
         text-align: center;
+        letter-spacing: 3px;
       }
       .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: hsl(203, 89%, 53%);
       }
     </style>
   </head>
@@ -45,16 +45,16 @@
         aria-label="theme toggle"
         role="radiogroup"
       >
+        <label for="dark"
+          >Dark Mode <span class="visualy-hidden">On</span></label
+        >
         <div class="toggle__wrapper">
           <input type="radio" name="theme" id="dark" />
-          <input type="radio" name="theme" id="system" checked />
           <input type="radio" name="theme" id="light" />
           <span aria-hidden="true" class="toggle__background"></span>
           <span aria-hidden="true" class="toggle__button"></span>
         </div>
-        <label for="dark">Dark</label>
-        <label for="system">System</label>
-        <label for="light">Light</label>
+        <label for="light" class="visualy-hidden">Dark Mode Off</label>
       </fieldset>
     </header>
     <main>
